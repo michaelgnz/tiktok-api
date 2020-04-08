@@ -1,6 +1,5 @@
 import axiosCookieJarSupport from 'axios-cookiejar-support';
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
-import * as JSONBig from 'json-bigint';
 import * as qs from 'qs';
 import { CookieJar } from 'tough-cookie';
 
@@ -538,7 +537,6 @@ export default class TikTokAPI {
     })
 
   /**
-   * Transform using JSONBig to store big numbers accurately (e.g. user IDs) as strings.
    *
    * @param {any} data
    * @returns {any}
@@ -547,7 +545,7 @@ export default class TikTokAPI {
     if (!data || !data.length) {
       return data;
     }
-    return JSONBig({ storeAsString: true }).parse(data);
+    return JSON.parse(data);
   }
 
   /**
