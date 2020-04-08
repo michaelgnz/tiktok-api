@@ -12,7 +12,7 @@
     "lint": "npm run lint:ts && npm run lint:docs",
     "lint:ts": "tslint --project tsconfig.json --config tslint.json",
     "lint:docs": "markdownlint *.md",
-    "prepare": "npm run build",
+    "prepare": "npm install util && npm install url && npm run build",
     "prepublishOnly": "npm run clean && npm run lint && npm run test && npm run build",
     "test": "TS_NODE_PROJECT=test/tsconfig.json mocha",
     "test-with-coverage": "TS_NODE_PROJECT=test/tsconfig.json nyc --reporter=text mocha",
