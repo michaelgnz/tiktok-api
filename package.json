@@ -41,7 +41,7 @@
     "axios-cookiejar-support": "^0.4.2",
     "json-bigint": "^0.3.0",
     "qs": "^6.6.0",
-    "tough-cookie": "^2.5.0"
+    "tough-cookie": "^4.0.0"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
