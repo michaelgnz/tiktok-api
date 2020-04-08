@@ -36,7 +36,7 @@
   "homepage": "https://github.com/szdc/tiktok-api#readme",
   "dependencies": {
     "@types/qs": "^6.5.1",
-    "@types/tough-cookie": "^2.3.4",
+    "@types/tough-cookie": "^4.0.0",
     "axios": "^0.18.0",
     "axios-cookiejar-support": "^0.4.2",
     "json-bigint": "^0.3.0",
