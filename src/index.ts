@@ -377,7 +377,10 @@ export default class TikTokAPI {
    * @param params
    */
   listForYouFeed = (params?: API.ListFeedRequest) =>
-    this.request.get<API.ListForYouFeedResponse | API.BaseResponseData>('aweme/v1/feed/', {
+    this.request.get<API.ListForYouFeedResponse | API.BaseResponseData>('aweme/v2/feed/', {
+      headers: {
+        "content-type": "application/x-protobuf; charset=utf-8"
+      },
       params: withDefaultListParams(<API.ListFeedRequest>{
         count: 6,
         is_cold_start: 1,
@@ -385,7 +388,7 @@ export default class TikTokAPI {
         pull_type: PullType.LoadMore,
         type: FeedType.ForYou,
         ...params,
-      }),
+      })
     })
 
   /**
